@@ -10,7 +10,7 @@ from telebot import types
 bot = telebot.TeleBot('8106529658:AAG-mwLdg-GJcFaiyCao2-NV3OGVnqZ84-M')
 
 # Admin user IDs
-admin_id = ["6062735907"-1002463590258"]
+admin_id = ["6062735907"]
 
 # File to store user data
 USER_DATA_FILE = "users_data.json"
