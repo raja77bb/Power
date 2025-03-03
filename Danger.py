@@ -50,12 +50,12 @@ def create_inline_keyboard():
     
     button1 = types.InlineKeyboardButton(
         text="🚀 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🚀", 
-        url="https://t.me/DANGER_BOY_OP1"
+        url="https://t.me/botid3434"
     )
     
     button2 = types.InlineKeyboardButton(
         text="👑 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗢𝘄𝗻𝗲𝗿 👑", 
-        url="https://t.me/DANGER_BOY_OP"
+        url="https://t.me/@Seema206p9"
     )
     
     # Add buttons in a structured layout
@@ -170,7 +170,7 @@ def handle_attack_command(message):
         "🚀 *Enter the target details in the format:* \n"
         "```\n<IP> <PORT> <DURATION>\n```"
         "⏳ *Example:* `192.168.1.1 80 120`\n"
-        "💀 *Maximum duration allowed: 280 seconds!*",reply_markup=create_inline_keyboard(), 
+        "💀 *Maximum duration allowed: 180 seconds!*",reply_markup=create_inline_keyboard(), 
         parse_mode="Markdown"
     )
     bot.register_next_step_handler(message, process_attack_input)
@@ -191,13 +191,13 @@ def process_attack_input(message):
             bot.send_message(message.chat.id, "❌ *Invalid Input Format!* ❌\n"
             "📌 *Use the correct format:* `<IP> <PORT> <DURATION>`\n"
             "💡 *Example:* `192.168.1.1 443 200`\n"
-            "⚠️ *Duration must be a number (Max: 280s)*",reply_markup=create_inline_keyboard(), 
+            "⚠️ *Duration must be a number (Max: 180s)*",reply_markup=create_inline_keyboard(), 
             parse_mode="Markdown")
             return
 
-        if duration > 280:
+        if duration > 180:
             bot.send_message(message.chat.id, "⏳ *Hold your fire!* ⏳\n"
-            "⚠️ *Maximum attack duration allowed is 280 seconds.*\n"
+            "⚠️ *Maximum attack duration allowed is 180 seconds.*\n"
             "💡 *Try again with a shorter duration!*",reply_markup=create_inline_keyboard(), 
             parse_mode="Markdown")
             return
@@ -220,7 +220,7 @@ def process_attack_input(message):
         bot.send_message(message.chat.id, "❌ *Invalid Input Format!* ❌\n"
             "📌 *Use the correct format:* `<IP> <PORT> <DURATION>`\n"
             "💡 *Example:* `192.168.1.1 443 200`\n"
-            "⚠️ *Duration must be a number (Max: 280s)*",reply_markup=create_inline_keyboard(), 
+            "⚠️ *Duration must be a number (Max: 180s)*",reply_markup=create_inline_keyboard(), 
             parse_mode="Markdown"
         )
 
